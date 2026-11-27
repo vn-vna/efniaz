@@ -1,0 +1,8 @@
+[package]
+name = "map-preview"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+map-core = { version = "0.1.0", path = "../map-core" }
+pmtiles = { version = "0.28.1", default-features = false }

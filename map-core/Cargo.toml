@@ -1,0 +1,9 @@
+[package]
+name = "map-core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+geo-types = "0.7"
+mvt-reader = "2.5.0"
+tiny-skia = "0.12.0"

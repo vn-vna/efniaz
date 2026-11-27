@@ -1,0 +1,34 @@
+[package]
+name = "wear-os"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[target.'cfg(target_os = "android")'.dependencies]
+android-activity = { version = "0.6.1", features = ["native-activity"] }
+khronos-egl = { version = "6", features = ["static", "no-pkg-config"] }
+glow = { version = "0.16" }
+libloading = { version = "0.8" }
+
+[package.metadata.android]
+package = "app.efniaz.navigation"
+apk_name = "efniaz-wear"
+build_targets = ["armv7-linux-androideabi", "aarch64-linux-android"]
+
+[package.metadata.android.sdk]
+min_sdk_version = 26
+target_sdk_version = 35
+
+[[package.metadata.android.uses_feature]]
+name = "android.hardware.type.watch"
+required = true
+
+[package.metadata.android.application]
+label = "Efniaz Watch"
+
+[package.metadata.android.application.activity]
+exported = true

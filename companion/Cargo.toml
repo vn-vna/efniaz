@@ -1,0 +1,27 @@
+[package]
+name = "companion"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[target.'cfg(target_os = "android")'.dependencies]
+android-activity = { version = "0.6.1", features = ["native-activity"] }
+
+[package.metadata.android]
+package = "app.efniaz.navigation"
+apk_name = "efniaz-companion"
+build_targets = ["aarch64-linux-android"]
+
+[package.metadata.android.sdk]
+min_sdk_version = 26
+target_sdk_version = 35
+
+[package.metadata.android.application]
+label = "Efniaz Companion"
+
+[package.metadata.android.application.activity]
+exported = true
