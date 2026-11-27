@@ -11,5 +11,5 @@ $env:CARGO_APK_RELEASE_KEYSTORE_PASSWORD = "android"
 # Use the cargo-apk installation from the scaffold verification.
 $env:Path = "$env:LOCALAPPDATA\Temp\opencode\efniaz-cargo-apk\bin;$env:Path"
 
-cargo apk build -p wear-os --release
-cargo apk build -p companion --release
+cargo apk build -p wear-os --lib --release
+cargo apk build -p companion --lib --release

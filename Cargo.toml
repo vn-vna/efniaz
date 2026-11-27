@@ -1,3 +1,3 @@
 [workspace]
-members = ["wear-os", "companion", "map-core", "map-preview"]
+members = ["wear-os", "companion", "map-core", "map-preview", "map-download"]
 resolver = "3"
